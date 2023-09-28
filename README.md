@@ -27,7 +27,7 @@ This project will conceive and execute a design that solves a real-world problem
 
     THEN I input the product that i want to sell
 
-    WHEN a produk is selected and been purchased
+    WHEN a product is selected and been purchased
 
     THEN I am receiving the confirmation dan earn the money
 
