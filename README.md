@@ -5,10 +5,10 @@ Projects model the experience will encounter in every development role at any co
 This project will conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests
 
 ## Link to github repository
+https://github.com/noeamelya/web-onlineshop-app
 
 ## Link to deployed application
 
-## Table of Contents
 
 ## USER STORY
 
@@ -32,9 +32,19 @@ This project will conceive and execute a design that solves a real-world problem
     THEN I am receiving the confirmation dan earn the money
 
 
-## USEAGE
+## OUTCOME
+
+![outcome the project](./images/outcome.png)
 
 ## Browser Support
+
+[API](https://api.jquery.com/)
+
+[jQuery](https://jquery.com/)
+
+[Bootstrap 5](https://getbootstrap.com/docs/5.3/examples/)
+
+
 
 ## License
     MIT License
