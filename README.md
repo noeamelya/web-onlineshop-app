@@ -8,6 +8,7 @@ This project will conceive and execute a design that solves a real-world problem
 https://github.com/noeamelya/web-onlineshop-app
 
 ## Link to deployed application
+https://noeamelya.github.io/web-onlineshop-app/
 
 
 ## USER STORY
