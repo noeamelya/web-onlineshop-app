@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,7 @@
 
     <nav class="navbar navbar-expand-lg rounded-3">
         <div class="container-fluid">
-          <h1>Old<span class="text-slate-500">Shop</span></h1>
+          <h1>Old<span class="text-white">Shop</span></h1>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -47,17 +48,103 @@
         <p>Category</p>
     </div>
     <div>
-        <select class="form-select" aria-label="Default select example">
+        <select aria-label="Default select example" class="form-control" id="product-category">
             <option selected>Open this select menu</option>
-            <option value="1">Book</option>
-            <option value="2">Clothes</option>
-            <option value="3">Home</option>
+             <option value="house">House</option>
+             <option value="kitchen">Kitchen</option>
+             <option value="office">Office</option>
+             <option value="utility">Utility</option>
+             <option value="fashion">Fashion</option>
+             <option value="acceessories">Accessories</option>
           </select>
     </div>
 
     <div>
-        <button type="button" class="btn btn-primary">Continue</button>
+      <button class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#product-modal">Add
+        Product</button>
     </div>
+</section>
+
+<main class="container-fluid">
+  <div class="row">
+<section class="row">
+  <div class="table-responsive">
+    <table class="table table-bordered custom-table">
+      <thead>
+        <tr>
+          <th scope="col">Product Image</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price ($)</th>
+          <th scope="col">Date</th>
+          <th scope="col">Description</th>
+          <th scope="col" class="p-3"></th>
+        </tr>
+      </thead>
+      <tbody id="product-display"></tbody>
+    </table>
+  </div>
+</section>
+</div>
+</main>
+
+    
+ <!-- Modal -->
+ <div class="modal fade custom-modal" id="product-modal" tabindex="-1" role="dialog"
+ aria-labelledby="product-modal-form" aria-hidden="true">
+ <div class="modal-dialog modal-lg modal-dialog-centered">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="product-modal-form">Add a new product.</h5>
+       <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <form id="product-form">
+       <div class="modal-body">
+         <div class="mb-3">
+           <label for="product-name-input">Product Name</label>
+           <input type="text" id="product-name-input" class="form-control" placeholder="Enter the product's name"
+             required />
+         </div>
+
+         <div class="mb-3">
+           <label for="price-rate-input">Price ($)</label>
+           <input type="number" id="price-rate-input" class="form-control" placeholder="$" min="0" required />
+         </div>
+
+         <div class="mb-3">
+           <label for="date-input">Date</label>
+           <input type="date" min='1' id="date-input" class="form-control" placeholder="When is the product available?"
+             required />
+         </div>
+
+       <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="file-product-Upload">
+        <input type="submit" value="Upload Image" name="submit">
+      </form>
+
+      <div class="mb-3">
+        <label for="product-description">Description</label>
+        <input type="text" id="product-description" class="form-control p-3 mb-4" required minlength="10" maxlength="200" size="10" placeholder="Product description"
+          required />
+      </div>
+    </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="submit" class="btn custom-btn">Submit Product Info</button>
+       </div>
+     </form>
+   </div>
+ </div>
+</div>
+
+
+
+
+
+
 
 
 
@@ -71,7 +158,7 @@
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-<script src="./assets/js/script.js"></script>
+<script src="../js/sale.js"></script>
 
 
 <!-- bootstrap -->
